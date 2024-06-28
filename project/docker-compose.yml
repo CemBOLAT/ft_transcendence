@@ -1,0 +1,50 @@
+version: '3.8'
+
+networks:
+  appNetwork:
+    driver: bridge
+    name: appNetwork
+
+volumes:
+  static_files:
+  postgres_data:
+
+services:
+  app:
+    build: ./project
+    volumes:
+      - static_files:/home/app/static_files
+      - ./project:/usr/src/app/
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - appNetwork
+    restart: unless-stopped
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:8080"
+      - "443:443"
+    volumes:
+      - static_files:/home/app/static_files
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - appNetwork
+    restart: unless-stopped
+    depends_on:
+      - app
+
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=transandence
+      - POSTGRES_PASSWORD=transandence
+      - POSTGRES_DB=transandence
+    networks:
+      - appNetwork
+    restart: unless-stopped

@@ -26,7 +26,7 @@ services:
   nginx:
     build: ./nginx
     ports:
-      - "8080:8080"
+      - "8080:80"
       - "443:443"
     volumes:
       - static_files:/home/app/static_files
@@ -42,9 +42,13 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=transandence
-      - POSTGRES_PASSWORD=transandence
-      - POSTGRES_DB=transandence
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
     networks:
       - appNetwork
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      retries: 5

@@ -8,3 +8,5 @@ psycopg2-pool==1.2
 pymongo==4.8.0
 sqlparse==0.2.4
 daphne==3.0.2
+twisted[tls,http2]==24.3.0
+service-identity==24.1.0

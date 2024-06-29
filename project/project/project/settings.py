@@ -26,11 +26,13 @@ SECRET_KEY = 'django-insecure-hq2-*gwf*4-349=+h8_j%ukbfw*y9d07wv&3@p$*mqfk8nr79+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1' ] # Add your domain name here
+ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost', '10.0' ]
 
-CSRF_TRUSTED_ORIGINS = ['https://localhost' 'https://127.0.0.1' ] # Add your domain name here
-
-SECURE_SSL_REDIRECT = True # Redirect all HTTP requests to HTTPS
+# ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1' ] # Add your domain name here
+#
+# CSRF_TRUSTED_ORIGINS = ['https://localhost' 'https://127.0.0.1' ] # Add your domain name here
+#
+# SECURE_SSL_REDIRECT = False # Redirect all HTTP requests to HTTPS
 
 
 # Application definition
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'app',
 ]
 
 MIDDLEWARE = [

@@ -5,6 +5,9 @@ all:
 	python3 manage.py migrate
 
 
+build:
+	docker-compose up --build
+
 http:
 	python3 manage.py runserver
 

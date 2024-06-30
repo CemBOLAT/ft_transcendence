@@ -1,0 +1,24 @@
+version: '3.7'
+
+networks:
+  webnet:
+    name: webnet
+    driver: bridge
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - webnet
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - webnet
+    depends_on:
+      - web

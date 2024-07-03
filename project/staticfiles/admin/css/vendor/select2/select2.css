@@ -54,7 +54,7 @@
   box-sizing: border-box;
   display: block;
   position: absolute;
-  left: -80000px;
+  left: -100000px;
   width: 100%;
   z-index: 1051; }
 

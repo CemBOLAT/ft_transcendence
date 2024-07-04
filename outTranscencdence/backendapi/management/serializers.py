@@ -1,4 +1,5 @@
 
+from django.contrib.auth.hashers import make_password
 from rest_framework import serializers
 from .models import Tournament, Game, User
 
@@ -23,26 +24,27 @@ class GameSerializer(serializers.Serializer):
 		instance.save()
 		return instance
 
-class UserSerializer(serializers.Serializer):
-	username = serializers.CharField()
-	userID = serializers.IntegerField()
-	email = serializers.EmailField()
-	password = serializers.CharField()
-	friends = serializers.ManyToManyField('self', blank=True, default=[])
-	games = serializers.ManyToManyField(Game, blank=True, default=[])
 
-	def create(self, validated_data):
-		return User.objects.create(**validated_data)
+class UserSerializer(serializers.ModelSerializer):
+    friends = serializers.PrimaryKeyRelatedField(many=True, queryset=User.objects.all())
+    games = serializers.PrimaryKeyRelatedField(many=True, queryset=Game.objects.all())
 
-	def update(self, instance, validated_data):
-		instance.username = validated_data.get('username', instance.username)
-		instance.userID = validated_data.get('userID', instance.userID)
-		instance.email = validated_data.get('email', instance.email)
-		instance.password = validated_data.get('password', instance.password)
-		instance.friends = validated_data.get('friends', instance.friends)
-		instance.games = validated_data.get('games', instance.games)
-		instance.save()
-		return instance
+    class Meta:
+        model = User
+        fields = ['username', 'userID', 'email', 'password', 'friends', 'games']
+        extra_kwargs = {
+            'password': {'write_only': True}
+        }
+
+    def create(self, validated_data):
+        validated_data['password'] = make_password(validated_data['password'])
+        return super(UserSerializer, self).create(validated_data)
+
+    def update(self, instance, validated_data):
+        if 'password' in validated_data:
+            validated_data['password'] = make_password(validated_data['password'])
+        return super(UserSerializer, self).update(instance, validated_data)
+
 
 class TournamentSerializer(serializers.Serializer):
 	tournamentID = serializers.IntegerField()

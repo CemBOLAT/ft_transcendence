@@ -26,6 +26,15 @@ SECRET_KEY = 'django-insecure-dw_yqqb16)clam5#&oue_&*wfk_nb$y_qh8)esyzl@hd)axpk0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:5500',  # Adjust this to match your frontend URL
+    'http://localhost:5500',  # Also consider localhost if needed
+]
+
+
+
 ALLOWED_HOSTS = []
 
 
@@ -41,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'game',
     'user',
+    'corsheaders',
     'management',
 ]
 
@@ -52,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backendapi.urls'

@@ -1,0 +1,301 @@
+
+.friend-name {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.friend-name:hover {
+    color: #717171;
+    transition: 0.3s;
+}
+
+.profileCardBG {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.setAvatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-table th,
+.card-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table thead th {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody td {
+    border-top: 1px solid #dee2e6;
+}
+
+/* styles/user/style.css */
+
+#profileImage {
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+
+.profileCardBG .card-body {
+    padding: 20px;
+}
+
+#userScore .list-group-item {
+    border: none;
+    padding: 10px 20px;
+}
+
+#userScore .list-group-item h6 {
+    font-weight: bold;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.text-secondary {
+    color: #6c757d;
+}
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th {
+    border: none;
+}
+
+.table-borderless tbody + tbody {
+    border-top: none;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.3rem;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+}
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th,
+.table-borderless tbody + tbody {
+    border: 0;
+}
+
+#outerUser {
+    position: relative;
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+#change-username-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+#change-username-btn:hover {
+    background-color: darkblue;
+}
+
+#change-username-btn:active {
+    background-color: lightblue;
+    transform: scale(0.95);
+}
+
+#change-username-btn:disabled {
+    background-color: grey;
+}
+
+#change-username-btn:disabled:hover {
+    background-color: grey;
+}
+
+#change-avatar-btn {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+#change-avatar-btn:hover {
+    background-color: darkgreen;
+}
+
+#change-avatar-btn:active {
+    background-color: lightgreen;
+    transform: scale(0.95);
+}
+
+#change-avatar-btn:disabled {
+    background-color: grey;
+}
+
+#change-avatar-btn:disabled:hover {
+    background-color: grey;
+}
+
+#change-bio-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+}
+
+#change-bio-btn:hover {
+    background-color: darkorange;
+}
+
+#change-bio-btn:active {
+    background-color: lightorange;
+    transform: scale(0.95);
+}
+
+#change-bio-btn:disabled {
+    background-color: grey;
+}
+
+#change-bio-btn:disabled:hover {
+    background-color: grey;
+}
+
+#change-password-btn {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+#change-password-btn:hover {
+    background-color: darkred;
+}
+
+#change-password-btn:active {
+    background-color: lightcoral;
+    transform: scale(0.95);
+}
+
+#change-password-btn:disabled {
+    background-color: grey;
+}
+
+#change-password-btn:disabled:hover {
+    background-color: grey;
+}
+
+/* MAKE IT YELEOW */
+#settings-btn {
+    background-color: purple;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+#settings-btn:hover {
+    background-color: rgb(73, 0, 73);
+}
+
+#settings-btn:active {
+    background-color: rgb(202, 0, 202);
+    transform: scale(0.95);
+}
+
+#settings-btn:disabled {
+    background-color: grey;
+}
+
+#settings-btn:disabled:hover {
+    background-color: grey;
+}
+
+#friends-lsit{
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+
+.online-status{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.online-status.online {
+    background-color: green;
+}
+.online-status.offline {
+    background-color: red;
+}
+
+.friends-box{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+#friendBox {
+    background: linear-gradient(180deg, rgb(255, 255, 70), rgb(255, 191, 71), rgb(255, 84, 84));
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+

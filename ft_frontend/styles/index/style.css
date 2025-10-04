@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-block{
+margin: auto;
+}
+
+body {
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
+font-family: 'fantasy', sans-serif;
+font-size: 16px;
+line-height: 1.5;
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  padding: auto;
+  width: 100%;
+}
+
+#signupdiv {
+  padding-bottom: 20vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  padding: auto;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.navbar .title
+{
+  margin-left: 30px;
+}
+
+.button-56 {
+  width: 80%;
+align-items: center;
+background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+border: 2px solid #111;
+border-radius: 8px;
+box-sizing: border-box;
+cursor: pointer;
+display: flex;
+font-family: Inter,sans-serif;
+font-size: 16px;
+height: 48px;
+justify-content: center;
+line-height: 24px;
+max-width: 100%;
+padding: 0 25px;
+position: relative;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+color: white;
+padding: 0 40px;
+
+}
+
+.button-56:after {
+background-color: #111;
+border-radius: 8px;
+content: "";
+display: block;
+height: 48px;
+left: 0;
+width: 100%;
+position: absolute;
+top: -2px;
+transform: translate(8px, 8px);
+transition: transform .2s ease-out;
+z-index: -1;
+}
+
+.button-56:hover:after {
+transform: translate(0, 0);
+}
+
+.button-56:active {
+background-color: #ffdeda;
+outline: 0;
+}
+
+.button-56:hover {
+outline: 0;
+}
+
+@media (min-width: 768px) {
+.button-56 {
+  padding: 0 40px;
+}
+}
+
+
+/* CSS */
+/* General styling for buttons */
+.button-24 {
+width: auto;
+background: rgba(2,0,36,1);
+border: 1px solid rgba(2,0,36,1);
+border-radius: 6px;
+box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+font-size: 16px;
+font-weight: 800;
+line-height: 16px;
+min-height: 40px;
+outline: 0;
+padding: 12px 14px;
+text-align: center;
+text-rendering: geometricprecision;
+text-transform: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+background-position: 0 0;
+color: white;
+animation: 2s linear 0s infinite normal none running button-24-animation;
+}
+
+.button-24:hover {
+opacity: .8;
+}
+
+.button-24:active {
+opacity: .5;
+}
+
+/* Navbar */
+.navbar {
+position: relative;
+margin-bottom: 10px;
+width: 100%;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+.navbar-nav {
+    text-align: center;
+}
+.button-24 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+}
+
+.navbar-nav{
+display: flex;
+justify-content: right;
+margin-left: 60%;
+}
+
+.refs { 
+/* the a tags in here generally */
+color: rgba(75,14,154,1);
+text-decoration: none;
+font-weight: 700;
+ 
+}
+
+.navbar{
+/* fixed on top */
+position: relative;
+margin-bottom: 10px;
+width: 100%;
+}
+
+.outerSite {
+/* the outermost div */
+height: 100%;
+width: 100%;
+}
+
+
+
+#userScore ul li{
+background-color: rgb(66, 168, 146);
+
+}
+
+#online-status {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+}
+
+.profileCardBG{
+background-color: rgb(66, 168, 146);
+}
+
+.card {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+position: relative;
+width: 100%;
+}
+
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 24
+}
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 24
+}
+
+
+#g-friend-not-btn{
+
+}
+
+.collapsible {
+background-color: #f1f1f1;
+color: black;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+}

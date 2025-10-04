@@ -1,0 +1,63 @@
+/ -> login signup formu
+
+/ -> auth olduysa site ekranı
+
+/login
+/signup
+/oauth/ecole
+/oauth/google
+
+/user/userid --> profile
+
+/user/userid/settings
+/user/userid/profile
+/user/userid/addfriend
+/user/userid/removefriend
+/user/userid/friends
+/user/userid/games
+/user/userid/game/gameid
+/user/userid/changepassword
+
+/game/roomid
+
+/chat/roomid
+
+/leaderboard/tournamentid
+
+{
+    user : {
+        username : "username",
+        nickname : "nickname",
+        password : "password",
+        email : "email",
+    }
+}
+
+histrory => {
+    match1 => {
+        usersid1 : {
+            id : 0
+            score : 100,
+            time : 100
+        },
+        usersid2 : {
+            id : 1
+            tournamentid : -1
+            score : 50,
+            time : 200
+        }
+    }
+}
+
+tournament => {
+    tournamentid : {
+        name : "tournamentname",
+        date : "date",
+        users : {
+            
+        }
+    }
+}
+
+
+

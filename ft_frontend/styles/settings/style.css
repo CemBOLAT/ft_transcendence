@@ -1,0 +1,147 @@
+/* styles/index/style.css */
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.setAvatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.btn-primary, .btn-danger, .btn-secondary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary:active, .btn-secondary:active {
+    background-color: #004085;
+    transform: scale(0.95);
+}
+
+.btn-primary:focus, .btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-danger:active {
+    background-color: #bd2130;
+    transform: scale(0.95);
+}
+
+.btn-danger:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.text-right {
+    text-align: right;
+    margin-top: 10px;
+}
+
+#preview {
+    margin-top: 15px;
+}
+
+.settingsFormInput {
+    margin-top: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-brand {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .btn-primary, .btn-danger, .btn-secondary {
+        padding: 8px 15px;
+    }
+
+    .text-right {
+        margin-top: 5px;
+    }
+}
+
+#settingCard{
+    width: 60%;
+    /** middle of the page */
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px){
+    #settingCard{
+        width: 100%;
+    }
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#settingBtnWrapper{
+    display: flex;
+    width: 100%;
+}
+
+#settingBtnWrapper button{
+    margin: 0 auto;
+}
+
+#profile-picture-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-label{
+    font-weight: bold;
+}

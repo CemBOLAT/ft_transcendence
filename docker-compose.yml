@@ -1,0 +1,66 @@
+version: '3.7'
+
+services:
+  web:
+    container_name: web
+    volumes:
+      - backend_volume:/project
+      - images_volume:/project/media/avatars
+    build: ./project
+    ports:
+      - "8000:8000"
+      - "3000:3000"
+    networks:
+      - mynetwork
+    depends_on:
+      - db
+    env_file:
+      - .env
+    restart: always  # Web servisini her zaman yeniden başlat
+
+  ft_frontend:
+    container_name: ft_frontend
+    build: ./ft_frontend
+    volumes:
+      - ./ft_frontend/index.html:/var/www/html/index.html
+      - ./ft_frontend/bootstrap:/var/www/html/bootstrap
+      - ./ft_frontend/scripts:/var/www/html/scripts
+      - ./ft_frontend/styles:/var/www/html/styles
+      - ./ft_frontend/imgs:/var/www/html/imgs
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - mynetwork
+    depends_on:
+      - web
+
+  db:
+    container_name: db
+    image: postgres:12
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+
+volumes:
+  backend_volume:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./project
+      o: bind
+  images_volume:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./project/media/avatars
+      o: bind
+
+networks:
+  mynetwork:
+    driver: bridge
